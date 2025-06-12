@@ -15,6 +15,7 @@
 <img src="https://img.shields.io/badge/MongoDB-282C34?logo=mongodb&logoColor=47A428" alt="mongodb logo" title="mongodb" height="25"/>
 
 ## ⚡Core Skill:
+<div style={{display:'flex'}}>
 <img src="https://img.shields.io/badge/React-282C34?logo=react&logoColor=61DAFB" alt="react logo" title="react" height="25"/>
 <img src="https://img.shields.io/badge/laravel-282C34?logo=laravel&logoColor=F05340" alt="laravel logo" title="laravel" height="25"/>
 <img src="https://img.shields.io/badge/Git-282C34?logo=git&logoColor=F05032" alt="git logo" title="git" height="25"/>
@@ -22,6 +23,7 @@
 <img src="https://img.shields.io/badge/Materail%20UI-282C34?logo=mui&logoColor=1F51FF" alt="mui logo" title="material ui" height="25"/>
 <img src="https://img.shields.io/badge/Bootstrap-282C34?logo=bootstrap&logoColor=563d7c" alt="bootstrap logo" title="bootstrap" height="25"/>
 <img src="https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" alt="mysql logo" title="mysql" height="25"/>
+</div>
 
 # 📫Reach me at:
 Email: muhammadkazim5806@gmail.com
