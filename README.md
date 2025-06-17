@@ -6,6 +6,7 @@
 <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" align="right" alt="coding" width="400"/>
 
 ## 🔭Currently in love with:
+<div style={{display:'flex'}}>
 <img src="https://img.shields.io/badge/javascript-282C34?logo=javascript&logoColor=F7DF1E" alt="Javascript logo" title="javacript" height="25"/>
 <img src="https://img.shields.io/badge/php-282C34?logo=php&logoColor=AEB2D5" alt="php logo" title="php" height="25"/>
 <img src="https://img.shields.io/badge/laravel-282C34?logo=laravel&logoColor=F05340" alt="laravel logo" title="laravel" height="25"/>
@@ -13,7 +14,7 @@
 <img src="https://img.shields.io/badge/Express-282C34?logo=Express&logoColor=FFFFFF" alt="express js logo" title="express js" height="25"/>
 <img src="https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" alt="mysql logo" title="mysql" height="25"/>
 <img src="https://img.shields.io/badge/MongoDB-282C34?logo=mongodb&logoColor=47A428" alt="mongodb logo" title="mongodb" height="25"/>
-
+</div>
 ## ⚡Core Skill:
 <div style={{display:'flex'}}>
 <img src="https://img.shields.io/badge/React-282C34?logo=react&logoColor=61DAFB" alt="react logo" title="react" height="25"/>
