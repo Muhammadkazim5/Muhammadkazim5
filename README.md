@@ -16,7 +16,8 @@
 <img src="https://img.shields.io/badge/MongoDB-282C34?logo=mongodb&logoColor=47A428" alt="mongodb logo" title="mongodb" height="25"/>
 </div>
 </br>
-⚡Core Skill:
+## ⚡Core Skill:
+</br>
 <div style={{display:'flex'}}>
 <img src="https://img.shields.io/badge/React-282C34?logo=react&logoColor=61DAFB" alt="react logo" title="react" height="25"/>
 <img src="https://img.shields.io/badge/laravel-282C34?logo=laravel&logoColor=F05340" alt="laravel logo" title="laravel" height="25"/>
