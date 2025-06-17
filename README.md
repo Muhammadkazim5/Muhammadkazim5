@@ -15,8 +15,8 @@
 <img src="https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" alt="mysql logo" title="mysql" height="25"/>
 <img src="https://img.shields.io/badge/MongoDB-282C34?logo=mongodb&logoColor=47A428" alt="mongodb logo" title="mongodb" height="25"/>
 </div>
-</br>
-## ⚡Core Skill:
+</br> 
+⚡Core Skill:
 </br>
 <div style={{display:'flex'}}>
 <img src="https://img.shields.io/badge/React-282C34?logo=react&logoColor=61DAFB" alt="react logo" title="react" height="25"/>
