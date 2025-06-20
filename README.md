@@ -29,7 +29,7 @@
 </div>
 </br>
 </br>
-# 📫Reach me at:
+📫Reach me at:
 Email: muhammadkazim5806@gmail.com
 Linkedin: https://www.linkedin.com/in/muhammad-kazim-3a571b244/
 
