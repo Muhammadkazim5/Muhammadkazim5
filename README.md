@@ -46,7 +46,7 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 - **CMS & Content Management**: Payload CMS
 - **Databases**: MySQL, PostgreSQL, MongoDB
 - **Version Control**: Git, GitHub
-- **Development Tools**: VS Code, Cursor, npm, Composer
+- **Development Tools**: VS Code, Cursor, npm, Composer ,pnpm , yarn
 
 ## 📫 Contact Information
 
