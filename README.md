@@ -41,9 +41,8 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 ## 🚀 Core Skills
 
 - **Frontend Development**: React.js, Next.js, JavaScript (ES6+), HTML5, CSS3
-- **UI/UX**: Material-UI, Bootstrap, Responsive Design
 - **Backend Development**: Node.js, Express.js, NestJS, PHP, Laravel
-- **CMS & Content Management**: Payload CMS
+- **CMS & Content Management**: Payload CMS , Wordpress
 - **Databases**: MySQL, PostgreSQL, MongoDB
 - **Version Control**: Git, GitHub
 - **Development Tools**: VS Code, Cursor, npm, Composer ,pnpm , yarn
