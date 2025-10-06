@@ -6,7 +6,7 @@
 
 I believe in continuous learning and staying up-to-date with the latest technologies and best practices in web development.
 
-<img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" align="right" alt="coding" width="400"/>
+<!-- <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" align="right" alt="coding" width="400"/> -->
 
 ## 🛠️ Tech Stack
 
