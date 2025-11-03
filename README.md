@@ -39,7 +39,6 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 ![Cursor](https://img.shields.io/badge/Cursor-282C34?logo=cursor&logoColor=00FF00)
 
 ## 🚀 Core Skills
-
 - **Frontend Development**: React.js, Next.js, JavaScript (ES6+), HTML5, CSS3
 - **Backend Development**: Node.js, Express.js, NestJS, PHP, Laravel
 - **CMS & Content Management**: Payload CMS , Wordpress
@@ -48,7 +47,6 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 - **Development Tools**: VS Code, Cursor, npm, Composer ,pnpm , yarn
 
 ## 📫 Contact Information
-
 - **Email**: [muhammadkazim5806@gmail.com](mailto:muhammadkazim5806@gmail.com)
 - **LinkedIn**: [Muhammad Kazim](https://www.linkedin.com/in/muhammad-kazim-3a571b244/)
 
