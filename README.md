@@ -8,7 +8,6 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 <!-- <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" align="right" alt="coding" width="400"/> -->
 
 ## 🛠️ Tech Stack
-
 ### Frontend Technologies
 ![JavaScript](https://img.shields.io/badge/JavaScript-282C34?logo=javascript&logoColor=F7DF1E)
 ![React](https://img.shields.io/badge/React-282C34?logo=react&logoColor=61DAFB)
