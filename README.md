@@ -40,8 +40,8 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 
 - **Frontend Development**: React.js, Next.js, JavaScript (ES6+), HTML5, CSS3
 - **Backend Development**: Node.js, Express.js, NestJS, PHP, Laravel
-- **CMS & Content Management**: Payload CMS , Wordpress
-- **Databases**: MySQL, PostgreSQL, MongoDB
+- **CMS & Content Management**: Payload CMS , Wordpress 
+- **Databases**: MySQL, PostgreSQL, MongoDB ,SQLite
 - **Version Control**: Git, GitHub
 - **Development Tools**: VS Code, Cursor, npm, Composer ,pnpm , yarn
 
