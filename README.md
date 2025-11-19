@@ -49,14 +49,14 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 - **Email**: [muhammadkazim5806@gmail.com](mailto:muhammadkazim5806@gmail.com)
 - **LinkedIn**: [Muhammad Kazim](https://www.linkedin.com/in/muhammad-kazim-3a571b244/)
 
-## 🌟 What I'm Currently Working On
+//## 🌟 What I'm Currently Working On
 
-I'm passionate about:
-- Building scalable web applications
-- Learning new technologies and frameworks
-- Contributing to open-source projects
-- Creating intuitive user experiences
----
-*Feel free to reach out if you'd like to collaborate on a project or just want to connect!*
+//I'm passionate about:
+//- Building scalable web applications
+//- Learning new technologies and frameworks
+//- Contributing to open-source projects
+//- Creating intuitive user experiences
+//---
+//*Feel free to reach out if you'd like to collaborate on a project or just want to connect!*
 
 
