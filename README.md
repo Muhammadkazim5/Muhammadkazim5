@@ -1,7 +1,6 @@
 # Muhammad Kazim 🧑‍💻
-## About Me
-
-👋 Hi, I'm Muhammad Kazim! I'm a passionate web developer specializing in front-end development and modern web technologies. I'm dedicated to creating beautiful, functional, and user-friendly web applications.
+# About Me
+👋 Hi, I'm Muhammad Kazim! I'm a passionate web developer specializing in front-end and backend development and modern web technologies. I'm dedicated to creating beautiful, functional, and user-friendly web applications.
 
 I believe in continuous learning and staying up-to-date with the latest technologies and best practices in web development.
 <!-- <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" align="right" alt="coding" width="400"/> -->
@@ -47,12 +46,10 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 ![](https://github-readme-stats.vercel.app/api?username=muhammadkazim5&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=muhammadkazim5&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadkazim5&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
-## 🏆 GitHub Trophies
+# 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=muhammadkazim5&theme=radical&no-frame=false&no-bg=false&margin-w=4)
----
 [![](https://visitcount.itsvg.in/api?id=muhammadkazim5&icon=8&color=3)](https://visitcount.itsvg.in)
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
-## 📫 Contact Information
-- **Email**: [muhammadkazim5806@gmail.com](mailto:muhammadkazim5806@gmail.com)
-- **LinkedIn**: [Muhammad Kazim](https://www.linkedin.com/in/muhammad-kazim-3a571b244/)
+# 📫 Contact Information
+- **Email**: [muhammadkazim5806@gmail.com](mailto:muhammadkazim5806@gmail.com) **LinkedIn**: [Muhammad Kazim](https://www.linkedin.com/in/muhammad-kazim-3a571b244/)
