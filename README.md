@@ -1,6 +1,10 @@
 <!-- # Muhammad Kazim 🧑‍💻  -->
 <!-- # About Me  -->
-👋 Hi, I'm Muhammad Kazim! I'm a passionate web developer specializing in both front-end and backend development and modern web technologies. I'm dedicated to creating beautiful, functional, and user-friendly web applications.
+👋 Hi, I’m Muhammad Kazim
+
+I’m a passionate Full-Stack Web Developer with experience in both front-end and back-end development, specializing in modern web technologies. I enjoy building clean, scalable, and user-focused web applications, with a strong emphasis on performance, usability, and maintainable code.
+
+I’m continuously learning and refining my skills to deliver high-quality digital solutions and turn ideas into reliable, real-world applications.
 
 I believe in continuous learning and staying up-to-date with the latest technologies and best practices in web development.
 <!-- <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" align="right" alt="coding" width="400"/> -->
