@@ -61,7 +61,7 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 </table>
 
 
-<!-- # 🏆 GitHub Trophies
+# 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=muhammadkazim5&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 [![](https://visitcount.itsvg.in/api?id=muhammadkazim5&icon=8&color=3)](https://visitcount.itsvg.in)
 
