@@ -61,11 +61,11 @@ I believe in continuous learning and staying up-to-date with the latest technolo
 </table>
 
 
-# 🏆 GitHub Trophies
+<!--# 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=muhammadkazim5&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 [![](https://visitcount.itsvg.in/api?id=muhammadkazim5&icon=8&color=3)](https://visitcount.itsvg.in)
 
-Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+<!--Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 # 📫 Contact Information
 - **Email**: [muhammadkazim5806@gmail.com](mailto:muhammadkazim5806@gmail.com)     **LinkedIn**: [Muhammad Kazim](https://www.linkedin.com/in/muhammad-kazim-3a571b244/)
