@@ -1,154 +1,1062 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="z06O1FCeSjR05OF3GB86htJBP01t7aBUMrX1j0o_W8Y" />
-  <title>Muhammad Kazim | Full Stack Developer</title>
-
+  <title>Muhammad Kazim — Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #080c10;
+      --bg2: #0d1117;
+      --surface: #111820;
+      --border: #1e2d3d;
+      --accent: #00d4ff;
+      --accent2: #7928ca;
+      --accent3: #ff6b35;
+      --text: #e8edf2;
+      --muted: #5a7a8a;
+      --green: #00ff9d;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+      cursor: none;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
+    /* CUSTOM CURSOR */
+    .cursor {
+      width: 12px; height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: fixed;
+      top: 0; left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.1s ease;
+      mix-blend-mode: screen;
+    }
+    .cursor-ring {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(0,212,255,0.4);
+      border-radius: 50%;
+      position: fixed;
+      top: 0; left: 0;
+      pointer-events: none;
+      z-index: 9998;
+      transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease;
+    }
+    .cursor-ring.hover { width: 60px; height: 60px; border-color: var(--accent); }
+
+    /* NOISE OVERLAY */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.35;
     }
 
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(8,12,16,0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(30,45,61,0.5);
     }
-
-    .hero h1 {
-      font-size: 42px;
-      color: #38bdf8;
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      color: var(--accent);
     }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: auto;
-      color: #cbd5f5;
-    }
-
-    .section {
-      margin-top: 50px;
-    }
-
-    .section h2 {
-      color: #38bdf8;
-      margin-bottom: 15px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background: #1e293b;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .contact a {
-      color: #38bdf8;
+    .nav-links { display: flex; gap: 40px; list-style: none; }
+    .nav-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
       text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-dot {
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--green);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
     }
 
-    footer {
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 140px 60px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+    }
+    .hero-glow {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      pointer-events: none;
+    }
+    .hero-glow2 {
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(121,40,202,0.1) 0%, transparent 70%);
+      bottom: 0; left: 100px;
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 900px; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: rgba(0,212,255,0.07);
+      border: 1px solid rgba(0,212,255,0.2);
+      padding: 6px 14px;
+      border-radius: 2px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    .hero-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    .hero-name .line1 { display: block; color: var(--text); }
+    .hero-name .line2 {
+      display: block;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 48px;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .hero-desc span { color: var(--text); }
+    .hero-cta {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 14px 28px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,212,255,0.4); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent;
+      color: var(--text);
+      padding: 14px 28px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 60px;
+      display: flex; align-items: center; gap: 12px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: fadeUp 0.6s 0.5s ease both;
+    }
+    .hero-scroll::before {
+      content: '';
+      display: block;
+      width: 40px; height: 1px;
+      background: var(--border);
+    }
+
+    /* STATS */
+    .stats-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+    .stat-item {
+      background: var(--bg);
+      padding: 24px 40px;
       text-align: center;
-      margin-top: 40px;
-      color: #94a3b8;
+    }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* SECTION */
+    section { padding: 100px 60px; }
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.4;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 60px;
+    }
+
+    /* ABOUT */
+    #about { background: var(--bg2); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-text p {
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    .about-text p span { color: var(--text); font-weight: 500; }
+    .about-links { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+    .about-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.3s;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+    }
+    .about-link:hover { color: var(--accent); border-color: var(--accent); }
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+    .about-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+    .info-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(30,45,61,0.5);
+      font-size: 0.9rem;
+    }
+    .info-item:last-child { border-bottom: none; }
+    .info-key {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      min-width: 80px;
+    }
+    .info-val { color: var(--text); }
+    .info-val a { color: var(--accent); text-decoration: none; }
+
+    /* SKILLS */
+    #skills { background: var(--bg); }
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .skill-cat {
+      background: var(--bg);
+      padding: 36px 32px;
+    }
+    .skill-cat-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      padding: 6px 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 2px;
+      transition: all 0.25s;
+      cursor: default;
+    }
+    .skill-tag:hover {
+      background: rgba(0,212,255,0.08);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* PROJECTS */
+    #projects { background: var(--bg2); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .project-card {
+      background: var(--bg2);
+      padding: 36px;
+      position: relative;
+      transition: background 0.3s;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .project-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 0;
+      background: linear-gradient(180deg, rgba(0,212,255,0.05) 0%, transparent 100%);
+      transition: height 0.3s;
+    }
+    .project-card:hover::after { height: 100%; }
+    .project-card:hover { background: var(--surface); }
+    .project-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--border);
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+    .project-card:hover .project-num { color: var(--accent); }
+    .project-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: var(--text);
+      transition: color 0.3s;
+    }
+    .project-card:hover .project-title { color: var(--accent); }
+    .project-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+    .project-footer {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .project-lang {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+    .lang-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+    .project-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: color 0.3s;
+    }
+    .project-link:hover { color: var(--accent); }
+    .project-link svg { transition: transform 0.3s; }
+    .project-link:hover svg { transform: translate(3px,-3px); }
+
+    /* EXPERIENCE */
+    #experience { background: var(--bg); }
+    .exp-timeline { position: relative; padding-left: 24px; }
+    .exp-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--accent) 0%, var(--border) 100%);
+    }
+    .exp-item {
+      position: relative;
+      padding: 0 0 48px 40px;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.5s ease;
+    }
+    .exp-item.visible { opacity: 1; transform: translateX(0); }
+    .exp-dot {
+      position: absolute;
+      left: -5px; top: 4px;
+      width: 10px; height: 10px;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+    }
+    .exp-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .exp-role {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .exp-company {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .exp-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 600px;
+    }
+
+    /* CONTACT */
+    #contact {
+      background: var(--bg2);
+      text-align: center;
+    }
+    .contact-inner { max-width: 700px; margin: 0 auto; }
+    .contact-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+    .contact-title span {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .contact-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+    .contact-email {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--text);
+      text-decoration: none;
+      padding: 16px 28px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: all 0.3s;
+      margin-bottom: 48px;
+    }
+    .contact-email:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 0 30px rgba(0,212,255,0.1);
+    }
+    .social-links { display: flex; justify-content: center; gap: 24px; }
+    .social-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .social-link:hover { color: var(--accent); }
+
+    /* FOOTER */
+    footer {
+      padding: 24px 60px;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    footer p {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      #hero { padding: 120px 24px 60px; }
+      .hero-scroll { left: 24px; }
+      section { padding: 70px 24px; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .skills-container { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
     }
   </style>
 </head>
-
 <body>
 
-<div class="container">
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>👋 Muhammad Kazim</h1>
-    <p>
-      Passionate Full-Stack Web Developer specializing in modern web technologies.
-      I build scalable, user-focused applications with clean and maintainable code.
-    </p>
-  </div>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">MK.</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-dot"></div>
+  </nav>
 
-  <!-- About -->
-  <div class="section">
-    <h2>🚀 About Me</h2>
-    <div class="card">
-      <p>
-        I’m a Full-Stack Developer with strong experience in frontend and backend development.
-        I focus on performance, usability, and clean architecture.
-        I continuously learn new technologies and improve my skills to deliver high-quality solutions.
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Available for opportunities</div>
+      <h1 class="hero-name">
+        <span class="line1">Muhammad</span>
+        <span class="line2">Kazim.</span>
+      </h1>
+      <p class="hero-desc">
+        <span>Full-Stack Developer</span> based in Islamabad, Pakistan.
+        I craft clean, scalable web applications with a passion for
+        <span>React, Node.js, NestJS</span> and modern web technologies.
+        Turning ideas into reliable, real-world products.
       </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg>
+          View Projects
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get In Touch
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll to explore</div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num" data-count="33">0</div>
+      <div class="stat-label">Repositories</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-count="25">0</div>
+      <div class="stat-label">Technologies</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-count="2">0</div>
+      <div class="stat-label">Organizations</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-count="4">0</div>
+      <div class="stat-label">GitHub Achievements</div>
     </div>
   </div>
 
-  <!-- Skills -->
-  <div class="section">
-    <h2>💻 Tech Stack</h2>
-    <div class="skills">
-      <span class="skill">JavaScript</span>
-      <span class="skill">React</span>
-      <span class="skill">Next.js</span>
-      <span class="skill">Node.js</span>
-      <span class="skill">NestJS</span>
-      <span class="skill">Express</span>
-      <span class="skill">PHP</span>
-      <span class="skill">Laravel</span>
-      <span class="skill">MongoDB</span>
-      <span class="skill">MySQL</span>
-      <span class="skill">PostgreSQL</span>
-      <span class="skill">Redux</span>
-      <span class="skill">Prisma</span>
-      <span class="skill">Git</span>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 / About</div>
+    <h2 class="section-title reveal">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a <span>passionate Full-Stack Web Developer</span> with hands-on experience in both front-end and back-end development. I specialize in building modern web applications that are clean, scalable, and user-focused.
+        </p>
+        <p>
+          My work spans from building <span>production-ready authentication systems</span> with Next.js to designing <span>complete hotel management platforms</span> with Laravel. I bring strong emphasis on performance, usability, and maintainable code.
+        </p>
+        <p>
+          I believe in <span>continuous learning</span> and staying up-to-date with the latest technologies. Currently working with <span>@Execudea</span> and <span>@uExel</span>, solving real-world problems through code.
+        </p>
+        <div class="about-links">
+          <a href="https://github.com/Muhammadkazim5" class="about-link" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-kazim-3a571b244/" class="about-link" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://kazim-portfolio-mk.vercel.app/" class="about-link" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Portfolio
+          </a>
+        </div>
+      </div>
+      <div class="about-card reveal">
+        <h3>// Quick Info</h3>
+        <div class="info-item">
+          <span class="info-key">Name</span>
+          <span class="info-val">Muhammad Kazim</span>
+        </div>
+        <div class="info-item">
+          <span class="info-key">Location</span>
+          <span class="info-val">Islamabad, Pakistan 🇵🇰</span>
+        </div>
+        <div class="info-item">
+          <span class="info-key">Role</span>
+          <span class="info-val">Full-Stack Developer</span>
+        </div>
+        <div class="info-item">
+          <span class="info-key">Focus</span>
+          <span class="info-val">React · Node.js · NestJS</span>
+        </div>
+        <div class="info-item">
+          <span class="info-key">Email</span>
+          <span class="info-val"><a href="mailto:muhammadkazim5806@gmail.com">muhammadkazim5806@gmail.com</a></span>
+        </div>
+        <div class="info-item">
+          <span class="info-key">Status</span>
+          <span class="info-val" style="color: var(--green);">● Open to work</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- GitHub Stats -->
-  <div class="section">
-    <h2>📊 GitHub Stats</h2>
-    <div class="card">
-      <img width="100%" src="https://nirzak-streak-stats.vercel.app/?user=muhammadkazim5&theme=dark" />
-      <br><br>
-      <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadkazim5&layout=compact&theme=dark" />
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">02 / Skills</div>
+    <h2 class="section-title reveal">Tech Stack</h2>
+    <div class="skills-container reveal">
+      <div class="skill-cat">
+        <div class="skill-cat-title">Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">Redux</span>
+          <span class="skill-tag">React Query</span>
+          <span class="skill-tag">React Router</span>
+          <span class="skill-tag">Vite</span>
+          <span class="skill-tag">Chakra UI</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">Chart.js</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">NestJS</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">Laravel</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">Payload CMS</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Database & Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Supabase</span>
+          <span class="skill-tag">Prisma</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Vercel</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">scikit-learn</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Contact -->
-  <div class="section">
-    <h2>📫 Contact</h2>
-    <div class="card contact">
-      <p>Email: <a href="mailto:muhammadkazim5806@gmail.com">muhammadkazim5806@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-kazim-3a571b244/" target="_blank">Muhammad Kazim</a></p>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">03 / Projects</div>
+    <h2 class="section-title reveal">Featured Work</h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-num">001</div>
+        <div class="project-title">Next.js Better Auth</div>
+        <p class="project-desc">Full-featured authentication & authorization starter built for real-world production apps. Includes role-based access, session management, and security best practices.</p>
+        <div class="project-footer">
+          <span class="project-lang">
+            <span class="lang-dot" style="background:#3178c6"></span>
+            TypeScript
+          </span>
+          <a href="https://github.com/Muhammadkazim5/nextjs-better-auth" class="project-link" target="_blank">
+            View Repo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">002</div>
+        <div class="project-title">Car Booking Website</div>
+        <p class="project-desc">Modern car booking platform built with Vue.js. Features real-time availability checking, car listings, complete booking flow, and a fully responsive UI.</p>
+        <div class="project-footer">
+          <span class="project-lang">
+            <span class="lang-dot" style="background:#42b883"></span>
+            Vue.js
+          </span>
+          <a href="https://github.com/Muhammadkazim5/Car-Booking-website" class="project-link" target="_blank">
+            View Repo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">003</div>
+        <div class="project-title">Hotel Management System</div>
+        <p class="project-desc">Complete hotel management platform built with Laravel 11. Includes room management, reservations, customer profiles, online payments, invoice generation, and staff roles with permissions.</p>
+        <div class="project-footer">
+          <span class="project-lang">
+            <span class="lang-dot" style="background:#ff2d20"></span>
+            Laravel / PHP
+          </span>
+          <a href="https://github.com/Muhammadkazim5/hotel-management-system-laravel-11" class="project-link" target="_blank">
+            View Repo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">004</div>
+        <div class="project-title">PrimePicks E-Commerce</div>
+        <p class="project-desc">Modern e-commerce platform with Django. Product catalog, search & filters, shopping cart, checkout, user accounts, payment integration, and full order tracking.</p>
+        <div class="project-footer">
+          <span class="project-lang">
+            <span class="lang-dot" style="background:#e34c26"></span>
+            Django / Python
+          </span>
+          <a href="https://github.com/Muhammadkazim5/Ecom-Website-PrimePicks--django" class="project-link" target="_blank">
+            View Repo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">005</div>
+        <div class="project-title">Multi-Step Form</div>
+        <p class="project-desc">Elegant multi-step form built with Next.js and TypeScript. Features smooth transitions, form validation, and clean state management across all steps.</p>
+        <div class="project-footer">
+          <span class="project-lang">
+            <span class="lang-dot" style="background:#3178c6"></span>
+            TypeScript
+          </span>
+          <a href="https://github.com/Muhammadkazim5/next-muti-step-form" class="project-link" target="_blank">
+            View Repo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">006</div>
+        <div class="project-title">Affiliate Marketing Website</div>
+        <p class="project-desc">Full affiliate marketing platform built with JavaScript. Streamlined product promotion, tracking, and conversion-optimized landing pages.</p>
+        <div class="project-footer">
+          <span class="project-lang">
+            <span class="lang-dot" style="background:#f7df1e"></span>
+            JavaScript
+          </span>
+          <a href="https://github.com/Muhammadkazim5/Affiliate-Marketing-Website" class="project-link" target="_blank">
+            View Repo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
-  </div>
+    <div style="text-align:center; margin-top:40px;" class="reveal">
+      <a href="https://github.com/Muhammadkazim5?tab=repositories" class="btn-secondary" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        View All 33 Repositories
+      </a>
+    </div>
+  </section>
 
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="section-label" style="justify-content:center">04 / Contact</div>
+      <h2 class="contact-title reveal">
+        Let's Build<br><span>Something.</span>
+      </h2>
+      <p class="contact-sub reveal">
+        Have a project in mind or want to collaborate? I'm always open to new opportunities and interesting challenges. Drop me a line!
+      </p>
+      <div class="reveal">
+        <a href="mailto:muhammadkazim5806@gmail.com" class="contact-email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          muhammadkazim5806@gmail.com
+        </a>
+      </div>
+      <div class="social-links reveal">
+        <a href="https://github.com/Muhammadkazim5" class="social-link" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-kazim-3a571b244/" class="social-link" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://kazim-portfolio-mk.vercel.app/" class="social-link" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Live Site
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Muhammad Kazim | Full Stack Developer</p>
+    <p>© 2026 Muhammad Kazim — All rights reserved.</p>
+    <p>Built with HTML · CSS · JS</p>
   </footer>
 
-</div>
+  <script>
+    // CURSOR
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.transform = `translate(${mx - 6}px, ${my - 6}px)`;
+    });
+    function animateRing() {
+      rx += (mx - rx - 20) * 0.12;
+      ry += (my - ry - 20) * 0.12;
+      ring.style.transform = `translate(${rx}px, ${ry}px)`;
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+    });
 
+    // SCROLL REVEAL
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal, .exp-item').forEach(el => observer.observe(el));
+
+    // COUNT UP
+    const countObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.count);
+          let start = 0;
+          const duration = 1500;
+          const step = timestamp => {
+            if (!start) start = timestamp;
+            const progress = Math.min((timestamp - start) / duration, 1);
+            el.textContent = Math.floor(progress * target);
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = target;
+          };
+          requestAnimationFrame(step);
+          countObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
+
+    // SMOOTH NAV
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // HERO PARALLAX
+    document.addEventListener('mousemove', e => {
+      const glow = document.querySelector('.hero-glow');
+      const glow2 = document.querySelector('.hero-glow2');
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+      glow.style.transform = `translate(${x}px, ${y}px)`;
+      glow2.style.transform = `translate(${-x}px, ${-y}px)`;
+    });
+  </script>
 </body>
 </html>
