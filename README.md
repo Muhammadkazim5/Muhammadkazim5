@@ -53,6 +53,7 @@ I believe in continuous learning and staying up-to-date with the latest technolo
     <td align="center">
       <img width="420" src="https://nirzak-streak-stats.vercel.app/?user=muhammadkazim5&theme=dark&hide_border=false" />
     </td>
+    <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=muhammadkazim5&" alt="muhammadkazim5" /></p>
     <td width="25"></td>
     <td align="center">
       <img width="360" src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadkazim5&theme=dark&hide_border=false&layout=compact" />
