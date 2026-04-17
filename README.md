@@ -52,7 +52,9 @@ I believe in continuous learning and staying up-to-date with the latest technolo
   <tr>
     <td align="center">
       <!-- <img width="420" src="https://nirzak-streak-stats.vercel.app/?user=muhammadkazim5&theme=dark&hide_border=false" /> -->
-    <img width="420" src="https://github-readme-streak-stats.herokuapp.com/?user=muhammadkazim5&" alt="muhammadkazim5" />
+    <img width="420" 
+src="https://github-readme-streak-stats.herokuapp.com/?user=muhammadkazim5&theme=dark&background=000000&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=ffffff&dates=ffffff" 
+alt="muhammadkazim5" />
     </td>
     <td width="25"></td>
     <td align="center">
