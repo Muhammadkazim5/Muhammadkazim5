@@ -15,18 +15,27 @@ I believe in continuous learning and staying up-to-date with the latest technolo
     <td align="center">
       <!-- <img width="420" src="https://nirzak-streak-stats.vercel.app/?user=muhammadkazim5&theme=dark&hide_border=false" /> -->
     <img width="420" 
-src="https://github-readme-streak-stats.herokuapp.com/?user=muhammadkazim5&theme=dark&background=000000&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=ffffff&dates=ffffff" 
+src="https://streak-stats.demolab.com/?user=Muhammadkazim5&theme=dark&hide_border=false" 
 alt="muhammadkazim5" />
     </td>
-    <td width="25"></td>
+    <td width="25"><img width="420" 
+src="https://github-readme-stats.shion.dev/api?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false" 
+alt="muhammadkazim5" /></td>
     <td align="center">
-      <img width="360" src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhammadkazim5&theme=dark&hide_border=false&layout=compact" />
+      <img width="360" src="https://github-readme-stats.shion.dev/api/top-langs/?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact" />
     </td>
   </tr>
 </table>
-<a href="https://rankistan.dev">
-  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Frankistan-summary-api.academics-ali.workers.dev%2Fapi%2Fbadge%2FMuhammadkazim5&style=for-the-badge" alt="Rankistan rank badge">
-</a>
+
+<p align="center" style="padding: 10px 0;">
+  <a href="https://rankistan.dev">
+    <img 
+      src="https://img.shields.io/endpoint?url=https%3A%2F%2Frankistan-summary-api.academics-ali.workers.dev%2Fapi%2Fbadge%2FMuhammadkazim5&style=for-the-badge" 
+      alt="Rankistan rank badge">
+  </a>
+</p>
+
+<hr>
 <!--
 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=muhammadkazim5&theme=radical&no-frame=false&no-bg=false&margin-w=4)
