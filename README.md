@@ -43,4 +43,13 @@ alt="muhammadkazim5" /></td>
 -->
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 # 📫 Contact Information
-- **Email**: [muhammadkazim5806@gmail.com](mailto:muhammadkazim5806@gmail.com)     **LinkedIn**: [Muhammad Kazim](https://www.linkedin.com/in/muhammad-kazim-3a571b244/)
+
+<p align="center">
+  <a href="mailto:muhammadkazim5806@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+
+  <a href="https://www.linkedin.com/in/muhammadkazim5/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
