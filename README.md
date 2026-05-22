@@ -24,7 +24,9 @@ alt="muhammadkazim5" />
     </td>
   </tr>
 </table>
-[![Rankistan rank badge](https://img.shields.io/endpoint?url=https%3A%2F%2Frankistan-summary-api.academics-ali.workers.dev%2Fapi%2Fbadge%2FMuhammadkazim5&style=for-the-badge)](https://rankistan.dev)
+<a href="https://rankistan.dev">
+  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Frankistan-summary-api.academics-ali.workers.dev%2Fapi%2Fbadge%2FMuhammadkazim5&style=for-the-badge" alt="Rankistan rank badge">
+</a>
 <!--
 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=muhammadkazim5&theme=radical&no-frame=false&no-bg=false&margin-w=4)
