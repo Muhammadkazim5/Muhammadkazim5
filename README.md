@@ -1,55 +1,67 @@
-👋 Hi, I’m Muhammad Kazim
+# 👋 Muhammad Kazim
 
-I’m a passionate Full-Stack Web Developer with experience in both front-end and back-end development, specializing in modern web technologies. I enjoy building clean, scalable, and user-focused web applications, with a strong emphasis on performance, usability, and maintainable code.
+## About Me
 
-I’m continuously learning and refining my skills to deliver high-quality digital solutions and turn ideas into reliable, real-world applications.
+I am a dedicated **Full-Stack Web Developer** with a strong background in both front-end and back-end development. I specialize in modern web technologies and focus on creating clean, scalable, and user-centric applications. My approach combines technical expertise with a commitment to best practices, ensuring the delivery of robust digital solutions.
 
-I believe in continuous learning and staying up-to-date with the latest technologies and best practices in web development.
+I am passionate about:
+- **Building intuitive, responsive user interfaces** that provide exceptional user experiences
+- **Developing scalable backend systems** that power modern applications
+- **Continuous learning** and staying current with emerging technologies and industry standards
+- **Transforming ideas into production-ready applications** that solve real-world problems
 
-# 💻 Tech Stack:
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB) ![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=flat&logo=react%20query&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white) ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=flat&logo=reacthookform&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=flat&logo=redux&logoColor=white) ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=flat&logo=nodemon&logoColor=%BBDEAD) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=flat&logo=next.js&logoColor=white) ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=flat&logo=nestjs&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=flat&logo=npm&logoColor=white) ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=flat&logo=laravel&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=flat&logo=JSON%20web%20tokens) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=flat&logo=express&logoColor=%2361DAFB) ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=flat&logo=chakraui&logoColor=white) ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=flat&logo=chart.js&logoColor=white) ![Context-API](https://img.shields.io/badge/Context--Api-000000?style=flat&logo=react) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=flat&logo=apache&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=flat&logo=mysql&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=flat&logo=Prisma&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=flat&logo=numpy&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&logo=scikit-learn&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat&logo=Matplotlib&logoColor=black) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=flat&logo=Keras&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat&logo=TensorFlow&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat&logo=githubactions&logoColor=white)
-# 📊 GitHub Stats:
-<!--![](https://github-readme-stats.vercel.app/api?username=muhammadkazim5&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>-->
+I believe that great code is not just functional—it's maintainable, efficient, and built with the end-user in mind.
+
+---
+
+## 💻 Technical Stack
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=%23FFD43B)
+
+---
+
+## 📊 GitHub Statistics
+
 <table align="center">
   <tr>
     <td align="center">
-      <!-- <img width="420" src="https://nirzak-streak-stats.vercel.app/?user=muhammadkazim5&theme=dark&hide_border=false" /> -->
-    <img width="420" 
-src="https://streak-stats.demolab.com/?user=Muhammadkazim5&theme=dark&hide_border=false" 
-alt="muhammadkazim5" />
+      <img width="420" src="https://streak-stats.demolab.com/?user=Muhammadkazim5&theme=dark&hide_border=false" alt="Contribution Streak" />
     </td>
-    <td width="25"><img width="420" 
-src="https://github-readme-stats.shion.dev/api?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false" 
-alt="muhammadkazim5" /></td>
     <td align="center">
-      <img width="360" src="https://github-readme-stats.shion.dev/api/top-langs/?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact" />
+      <img width="420" src="https://github-readme-stats.shion.dev/api?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false" alt="GitHub Stats" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img width="600" src="https://github-readme-stats.shion.dev/api/top-langs/?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="Top Languages" />
     </td>
   </tr>
 </table>
 
 <p align="center" style="padding: 10px 0;">
   <a href="https://rankistan.dev">
-    <img 
-      src="https://img.shields.io/endpoint?url=https%3A%2F%2Frankistan-summary-api.academics-ali.workers.dev%2Fapi%2Fbadge%2FMuhammadkazim5&style=for-the-badge" 
-      alt="Rankistan rank badge">
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Frankistan-summary-api.academics-ali.workers.dev%2Fapi%2Fbadge%2FMuhammadkazim5&style=for-the-badge" alt="Rankistan Badge" />
   </a>
 </p>
 
-<hr>
-<!--
-🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=muhammadkazim5&theme=radical&no-frame=false&no-bg=false&margin-w=4)
-[![](https://visitcount.itsvg.in/api?id=muhammadkazim5&icon=8&color=3)](https://visitcount.itsvg.in)
--->
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
-# 📫 Contact Information
+---
+
+## 📫 Get In Touch
+
+I'd love to connect with you! Feel free to reach out through any of the following channels:
 
 <p align="center">
   <a href="mailto:muhammadkazim5806@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-
+  &nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/muhammadkazim5">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
+</p>
+
+---
+
+<p align="center">
+  <em>Always open to discussing web development, collaborating on exciting projects, and exploring innovative solutions.</em>
 </p>
