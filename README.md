@@ -14,26 +14,18 @@ I believe that great code is not just functional—it's maintainable, efficient,
 
 ---
 
-## 💻 Technical Stack
-
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=%23FFD43B)
-
----
-
 ## 📊 GitHub Statistics
 
 <table align="center">
   <tr>
     <td align="center">
-      <img width="420" src="https://streak-stats.demolab.com/?user=Muhammadkazim5&theme=dark&hide_border=false" alt="Contribution Streak" />
+      <img width="300" src="https://streak-stats.demolab.com/?user=Muhammadkazim5&theme=dark&hide_border=false" alt="Contribution Streak" />
     </td>
     <td align="center">
-      <img width="420" src="https://github-readme-stats.shion.dev/api?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false" alt="GitHub Stats" />
+      <img width="300" src="https://github-readme-stats.shion.dev/api/top-langs/?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="Top Languages" />
     </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img width="600" src="https://github-readme-stats.shion.dev/api/top-langs/?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="Top Languages" />
+    <td align="center">
+      <img width="300" src="https://github-readme-stats.shion.dev/api?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false" alt="GitHub Stats" />
     </td>
   </tr>
 </table>
