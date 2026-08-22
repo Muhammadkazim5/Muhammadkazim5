@@ -19,8 +19,7 @@ I believe that great code is not just functional—it's maintainable, efficient,
 <table align="center">
   <tr>
     <td align="center">
-      ![](https://streak-stats.demolab.com/?user=Muhammadkazim5&theme=dark&hide_border=false)
-      <!-- <img width="300" src="https://streak-stats.demolab.com/?user=Muhammadkazim5&theme=dark&hide_border=false" alt="Contribution Streak" /> -->
+      <img width="300" src="https://streak-stats.demolab.com/?user=Muhammadkazim5&theme=dark&hide_border=false" alt="Contribution Streak" />
     </td>
     <td align="center">
       <img width="300" src="https://github-readme-stats.shion.dev/api/top-langs/?username=Muhammadkazim5&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="Top Languages" />
